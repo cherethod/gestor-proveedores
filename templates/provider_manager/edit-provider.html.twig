@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar proveedor{% endblock %}
+{% block stylesheets %} {{ parent() }} {% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="admin__container">
+            <div class="header__container">
+                <a href="{{ path('index') }}" class="link__item">Ir al inicio</a>
+            </div>
+            <div class="main__container edit__provider">
+                {{ form_start(edit_provider) }}
+                {{ form_row(edit_provider.nombre) }}
+                {{ form_row(edit_provider.email) }}
+                {{ form_row(edit_provider.telefono) }}
+                {{ form_row(edit_provider.activo) }}
+                {{ form_row(edit_provider.tipoProveedor) }}
+                <div class="btns__container">
+                    {{ form_row(edit_provider.submit) }}
+                    {{ form_row(edit_provider.cancelar) }}
+                </div>
+                {{ form_end(edit_provider) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
