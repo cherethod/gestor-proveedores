@@ -32,6 +32,7 @@ class NewProviderType extends AbstractType
                 'class' => ProviderType::class,
                 'choice_label' => 'nombre',
                 'choice_value' => 'id',
+                'placeholder' => 'Seleccione tipo de proveedor',
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Enviar',
